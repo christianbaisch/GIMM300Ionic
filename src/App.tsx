@@ -10,7 +10,7 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { home, list, business } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -34,6 +34,24 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+/* Firebase imports */
+
+import firebase from 'firebase/app'
+
+/* put in separate file and exclue file from get */
+var firebaseConfig = {
+  apiKey: "AIzaSyCokvSu-X9BcfX-Pcw-4_vblneuB5C-89s",
+  authDomain: "realtime-database-4387c.firebaseapp.com",
+  databaseURL: "https://realtime-database-4387c.firebaseio.com",
+  projectId: "realtime-database-4387c",
+  storageBucket: "realtime-database-4387c.appspot.com",
+  messagingSenderId: "536127021628",
+  appId: "1:536127021628:web:613d609b2dd85350df1939",
+  measurementId: "G-ZDXXCCF2Z5"
+};
+
+firebase.initializeApp(firebaseConfig);
+
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
@@ -46,16 +64,16 @@ const App: React.FC = () => (
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+            <IonIcon icon={list} />
+            <IonLabel>Submit</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+            <IonIcon icon={home} />
+            <IonLabel>My Events</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+            <IonIcon icon={business} />
+            <IonLabel>Find Events</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
