@@ -1,0 +1,9 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "realtime_database",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {},
+  "windowsAndroidStudioPath": "C:\\Program Files\\Android\\Android Studio\\bin\\studio64.exe"
+}
