@@ -3,7 +3,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard } from '@
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab2.css';
 
-import ItemList from '../itemList';
+import ItemList from '../ItemList';
 
 const Tab2: React.FC = () => {
 

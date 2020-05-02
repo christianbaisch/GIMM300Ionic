@@ -35,8 +35,10 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 
 /* Firebase imports */
-
 import firebase from 'firebase/app'
+import {GetProcessEnvironment} from './react-app-env.d';
+
+//firebase.initializeApp(GetProcessEnvironment());
 
 /* put in separate file and exclue file from get */
 var firebaseConfig = {
